@@ -1,13 +1,12 @@
-let ctx = null;
-
-// オーディオ有効化
+// iOS対策：最初のタップでAudio有効化
+let audioEnabled = false;
 const enableAudio = () => {
-  ctx = new (window.AudioContext || window.webkitAudioContext)();
+  audioEnabled = true;
   document.removeEventListener("touchstart", enableAudio);
 };
 document.addEventListener("touchstart", enableAudio);
 
-// 鍵盤レイアウト
+// 鍵盤レイアウト計算
 const whiteKeys = document.querySelectorAll(".white");
 const blackKeys = document.querySelectorAll(".black");
 
@@ -29,11 +28,11 @@ blackKeys.forEach((key, i) => {
   key.style.left = `${(octave * 7 + pos) * whiteWidth}px`;
 });
 
-// 和音
+// 和音対応（同時押しOK）
 document.querySelectorAll(".key").forEach(key => {
   const play = () => {
     const note = key.dataset.note;
-    const audio = new Audio(`sound/${note}.wav`);
+    const audio = new Audio(`sounds/${note}.wav`);
     audio.currentTime = 0;
     audio.play();
   };
@@ -44,3 +43,4 @@ document.querySelectorAll(".key").forEach(key => {
     play();
   });
 });
+
