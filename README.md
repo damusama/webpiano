@@ -2,9 +2,9 @@
 
 ☆<a href="https://webpiano.onrender.com/" target="_blank">こちら</a>からアクセスできます
 
-<video width="60%" style="border-radius: 10px; display: block; margin: 20px auto;" controls>
-  <source src="video/Web_Piano.mp4" type="video/mp4">
-</video>
+<gif width="60%" style="border-radius: 10px; display: block; margin: 20px auto;" controls>
+  <source src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzhtbDBld240d2JtczQyY2VtODhocDl4eTI5dnRuNThhYTg4em5ociZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WxgOuesUwIlvVEjFus/giphy.gif" type="gif">
+</gif>
 
 本作品は、PythonとFlaskを用いて制作したブラウザ上で演奏可能な Web ピアノアプリケーションである。スマートフォンやPCのブラウザからアクセスするだけで、インストール不要で鍵盤演奏を楽しめることを目的として開発した。音域はC4からB5までの2オクターブを実装している。
 
